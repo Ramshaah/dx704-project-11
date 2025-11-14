@@ -1,0 +1,2 @@
+Classify the home-service request as one of: electrical, plumbing, roofing. Answer with ONE WORD only (electrical|plumbing|roofing).
+Query: {query}

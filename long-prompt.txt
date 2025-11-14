@@ -1,0 +1,32 @@
+You classify a single home-services query into exactly one category:
+  • electrical
+  • plumbing
+  • roofing
+
+Return ONLY one of these exact lowercase words (no punctuation, no extras).
+
+Decision rules (apply in order; first match wins):
+1) ROOFING if issue mentions roof, shingles, leak from ceiling after rain/storm, flashing, gutter overflow causing interior leaks, skylight leaks, hail, blown-off shingles, attic leaks tied to weather, roof replacement/repair/inspection. Notes:
+   - If water damage is clearly from storm/rain/roof area → roofing even if breakers tripped.
+   - “Ceiling leak” with recent rain or from above floor = roofing unless a pipe/appliance source is explicit.
+
+2) PLUMBING if issue mentions pipes, drains, toilets, faucets, taps, showers, tubs, water heater/boiler, sewage, clog, low pressure, brown/rusty water, leaks from supply/fixture lines, under-sink, dishwasher supply/drain, garbage disposal. Notes:
+   - Water quality (brown/rusty), pressure, sewer smell → plumbing.
+   - Leaks near appliances (sink/dishwasher/washing machine) → plumbing unless clearly electrical-only.
+
+3) ELECTRICAL if issue mentions outlets, switches, lights, fixtures, breakers, GFCI, tripping circuits, panels, wiring, short, sparks at outlet/switch, new fan/fixture install, frequent flickering unrelated to rain intrusion.
+
+Tie-breakers:
+- If both water problem and roof/weather context → roofing.
+- If both water and indoor fixture/pipe context → plumbing.
+- If only electricity symptoms (tripping, flicker, outlet/switch) with no water source → electrical.
+
+Ambiguity:
+- If the query asks for an installation of a fan/light/fixture in attic/roof area without roof repair → electrical.
+- Never return multi-labels; choose the best single category via rules above.
+
+Format:
+Return exactly one token: electrical OR plumbing OR roofing.
+
+Now classify:
+Query: {query}

@@ -1,0 +1,6 @@
+query	target_category	predicted_category
+Water dripping from ceiling after storm; breaker tripped once.	roofing	electrical
+Outlet under sink sparking near dishwasher pipe.	electrical	plumbing
+Toilet hums when lights on; GFCI resets stop the noise.	electrical	plumbing
+Roof is fine; need a bathroom exhaust fan installed in attic.	electrical	roofing
+Brown water after rooftop work; also a light flickers sometimes.	plumbing	roofing

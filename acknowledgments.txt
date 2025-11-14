@@ -1,0 +1,4 @@
+Peers/mentors discussed with: none
+Extra libraries used: google-generativeai (only if GEMINI_API_KEY is set; otherwise none)
+Generative AI usage: Used ChatGPT to draft prompts and reproducible code. Labels/evaluation computed locally.
+Links: none
